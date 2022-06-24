@@ -1,0 +1,50 @@
+#wrapper {
+    height: calc(100vh - 75.6px);
+    background: linear-gradient(to left, #5fe5ec, #86A8E7, #7F7FD5);
+}
+
+.room-avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.room-avatar .overlay{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: absolute;
+	background-image: url('../images/background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0) scale(0);
+	/* opacity: 0; */
+	transition: .5s ease-in-out;
+}
+
+.room-avatar:hover .overlay{
+	/* opacity: 1; */
+	transform: translate(-50%, 0) scale(1);
+}
+
+.room-avatar .overlay .content{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	width: 100%;
+}
+
+.room-avatar .overlay .content a{
+	color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.room-avatar .overlay .content a:hover{
+	text-decoration: none;
+}
